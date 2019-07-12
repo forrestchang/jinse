@@ -1,0 +1,29 @@
+{{ partial "head" . }}
+
+<header>
+  <div class="post-title">
+    <h1>{{ .Params.title }}</h1>
+  </div>
+</header>
+
+<content>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+</content>
+
+<footer>
+  <div class="post-comment">
+    {{ if .Site.Params.utterance.enable }}
+      <script async src="https://utteranc.es/client.js"
+              repo="{{ .Site.Params.utterance.repo }}"
+              issue-term="{{ .Site.Params.utterance.issue_term }}"
+              theme="{{ default "github-light" .Site.Params.utterance.theme }}"
+              label="{{ .Site.Params.utterance.label }}"
+              crossorigin="anonymous">
+      </script>
+    {{ end }}
+    </div>
+</footer>
+
+{{ partial "footer" . }}

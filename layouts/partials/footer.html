@@ -1,0 +1,26 @@
+<!-- Google Analysis -->
+{{- if and (not .Site.IsServer) .Site.GoogleAnalytics -}}
+{{ template "_internal/google_analytics_async.html" . }}
+{{- end -}}
+
+
+<!-- Mathjax -->
+<script
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"
+  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k="
+  crossorigin="anonymous"
+></script>
+
+<script type="text/javascript">
+ window.MathJax = {
+   {{ if or .Params.mathjaxEnableSingleDollar (and .Site.Params.mathjaxEnableSingleDollar (ne .Params.mathjaxEnableSingleDollar false)) -}}
+   tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+   {{ end }}
+   {{ if or .Params.mathjaxEnableAutoNumber (and .Site.Params.mathjaxEnableAutoNumber (ne .Params.mathjaxEnableAutoNumber false)) -}}
+   TeX: {equationNumbers: {autoNumber: "AMS"}},
+   {{ end }}
+   showProcessingMessages: false,
+   messageStyle: 'none'
+ };
+</script>
