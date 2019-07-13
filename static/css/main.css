@@ -1,15 +1,54 @@
+::-moz-selection {
+  background-color: #fbdf5e;
+}
+
+::selection {
+  background-color: #fbdf5e;
+}
+
 body {
   font-size: 18px;
   font-family: sans-serif;
   max-width: 800px;
+  background: #f8f8f5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-top: 50px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 20px;
 }
 
 p {
   line-height: 1.6;
+}
+
+::-moz-selection {
+  background-color: #fbdf5e;
+}
+
+::selection {
+  background-color: #fbdf5e;
 }
 
 img {
@@ -21,4 +60,52 @@ pre {
   border: 1px solid black;
   padding: 10px;
   font-size: 16px;
+}
+
+code {
+  font-size: 16px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+table {
+  border: 1px dashed;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+thread {
+  background-color: gainsboro;
+}
+
+tr {
+  border-bottom: 1px solid;
+}
+
+.container {
+  padding: 30px;
+}
+
+.site-title {
+  margin-left: 20px;
+}
+
+.post-item {
+  margin-bottom: 5px;
+}
+
+.post-item a {
+  text-decoration: none;
+}
+
+.post-title {
+  margin-bottom: 70px;
+}
+
+blockquote {
+  border-left: 6px solid #ebebe9;
+  padding-left: 6px;
 }

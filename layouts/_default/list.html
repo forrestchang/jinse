@@ -1,10 +1,11 @@
+{{ partial "head" . }}
 
-<div>
+<div class="container">
   <ul class="post-list">
     {{ range where .Pages.ByDate.Reverse "Section" "post" }}
 
     <li class="post-item">
-      <a href="{{ .URL }}"><time style="color: black;">{{ .Date.Format "2006-01-02" }}</time> / {{ .Title }}</a>
+      <time style="color: black;">{{ .Date.Format "2006-01-02" }}</time> / <a href="{{ .URL }}">{{ .Title }}</a>
     </li>
 
     {{ end }}
