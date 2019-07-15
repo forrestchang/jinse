@@ -10,7 +10,7 @@ body {
   font-size: 18px;
   font-family: sans-serif;
   max-width: 800px;
-  background: #f8f8f5;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 h3 {
@@ -90,7 +90,7 @@ tr {
 }
 
 .site-title {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .post-item {
